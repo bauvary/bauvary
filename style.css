@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2? family= Montserrat+Alternates & family= Open+Sans:ital,wght@1,600 & display=swap');
+
+@import url('https://fonts.googleapis.com/css2? family= Open+Sans:ital,wght@1,600 & family= Playfair+Display:wght@600 & display=swap');
+/* Fonts issues de google fonts */
+
+body{
+    margin: 0; /* marge exterieurs */
+    padding: 0; /* marge interieur */
+    font-family: 'Montserrat', sans-serif;
+}
+nav{
+    display: flex; /* pour aligner les elements */
+    flex-wrap: wrap; /* pour empiler les elements */
+    justify-content: center;
+    align-items: center; /* pour aligner */
+    border-bottom: 10px solid #800008; /* barre de separation */
+} 
+nav h1{
+    color: #ff0000;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 35px;
+}
+nav .onglets{
+    margin-top: 3px; /* pour aligne les links avec le titre */
+    margin-left: 300px; /* pour eloigner le titre à gauche des links */
+    /*flex-wrap: wrap; */
+}
+nav .onglets a{
+    text-decoration: none; /* pour enlever le soulignment sous les onglets */
+    color: #000000; /* modifier la couleur en noir hexadecimal */
+    margin-right: 10px; /* espacement entre chaque lien */
+    border-bottom: 10px solid #ff0000; /* pour souligner chaque link */
+    padding-bottom: 5px; /* pour espacer les ecritures et la barre de soulignement */
+
+}
+nav .onglets .a button{
+    padding: 10px 20px; 
+    /* marge interieur en haut et en bas de 10px et une marge et à droit et à gauche de 20px */
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 30px; /* augmenl la taille de browse */
+    font-family: 'Playfair Display', sans-serif;
+    outline: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+header{
+    display:flex ; /* ca va aligner tous les elements */
+    flex-direction: column; /* pour les empiler en colonnes */
+    align-items: center; /* pour aligner les elements au niveau du header */
+    background: url('./image/burger-king2.png');
+    background-size: cover; /*couvrir la taille du header*/
+    color: #6f6f6f;  /*pas besoins car ma couleur noie me va !*/ 
+    padding: 45px;
+ }
+ header h1{
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 50px;
+    color: #ff0000;
+    margin-right: 600px;
+
+ }
+
+ header h4{
+    margin-top: -20px; /*reduire l'espace entre les lignes */
+    font-size: 20px;
+    text-align: center; /* aligner en cas de format mobile */
+    border-bottom: 1px solid #fff;
+    color: #ffffff;
+    margin-right: 600px;
+ }
+
+ header button{
+    padding: 10px 20px; 
+    /* marge interieur en haut et en bas de 10px et une marge et à droit et à gauche de 20px */
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 30px; /* augmenl la taille de browse */
+    font-family: 'Playfair Display', sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.main{
+    margin-top: 40px; /* pour séparer le header des produit */
+    display:flex ; /* ca va aligner tous les elements */
+    flex-direction: column; /* pour les empiler en colonnes */
+    align-items: center;
+
+}
+
+/* Proptiète sur la class card */
+.main .content .card{
+    display: flex; /* pour aligner les images à droit */
+    flex-wrap: wrap; /* pour empiler en cas de sur une plate-forme mobile*/
+    justify-content: center; /* centrer les elements */
+    margin-bottom: 20px; /* afin d'espacer les deux cards */
+}
+
+/* Pour rendre plus petit  la partie gauche */
+.main .content .card .left{
+    flex: 0 0 30%;
+    padding: 20px; /* marge interieur de 20 pixels */
+    background-color: #800008;
+    color: #fff;
+}
+
+.main .content .card .right{
+    flex: 0 0 70%;
+    
+}
+
+
+/* Adaptation de l'image sur la page */
+.main .content .card .right .img{
+    height: 300;
+    width: 400;
+    margin-top: 10px; /* espace entre l'image et le texte */
+
+
+}
+
+
+/* Le bas de page ; footer */
+
+footer{
+    margin-top: 40px; /* pour le separer des cartes de 40 pixels */
+    border-top: 10px solid #800008; /* La ligne de separation */
+    background-color: #800008;
+    color: #fff;
+    padding: 30px 100px; /* marge de 30 px en haut et bas et de 100 px à gauche et à droite */ 
+}
+
+footer h1{
+    font-family: 'Playfair Display', sans-serif;
+    border-bottom: 5px solid #fff; /* souligner le titre */
+    width: 20%; /* pour limiter le soulignement */
+    padding-bottom: 5px; /* separer le texte et la ligne */
+}
+
+/* On s'occupe des sous titres */
+
+footer .services{
+    margin-top: -10px;
+    display: flex; /* pour alligner les sous titres en ligne: donc former des colonnes */
+    flex-wrap: wrap; /* pour les empiler en cas de petit ecran */
+}
+
+/* On s'occupe des colonnes */
+
+footer .services .service{
+    margin-right: 30px;
+    padding: 10px; /* espace interieur à chaque element */
+}
+
+footer .services .services p{
+    max-width: 300px;
+}
+footer #contact{ /* le # pour montrer que c'est un lien id */
+    color: rgb(181, 181, 181); 
+
+}
+
+/* Adaptation au format mobile  si la taille d'ecran est inferieur à 680 pixels*/
+
+@media screen and (max-wigth:680px){
+    nav .onglets{
+        margin-left: 0px; /*enlever la marge que l'on avait mmi spour un taille d'ecran de pc */
+        margin-bottom: 20px ; /* marge entre le titre et les links */
+
+    }
+    .main .card{
+        margin: 10px;
+    }
+    /* modifie la taille de l'image */
+    .main .content .card .right img{
+        height: 200px;
+        width: 100px;
+        margin-top: 0px ; /* afin de coller l'image au texte */
+    }
+    .main .content .card{
+        display: block; /*pour annuler le display flex */
+    }
+    footer{
+        padding: 30px; /*marge interrieur à 30 px */
+    }
+}
